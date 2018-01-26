@@ -469,70 +469,7 @@ while(jouer){
         SDL_BlitSurface(caisse2, NULL, ecran, &positionCaisse2);
 
                     SDL_Flip(ecran);
-
-
-        /*switch(event.type)
-    {
-        case SDL_QUIT:
-
-
-
-            continuer = 0;
-            jouer = 0;
-            break;
-
-        case SDL_KEYDOWN:
-             switch(event.key.keysym.sym)
-                {
-                    case SDLK_UP:
-                        if(positionMario.y == 395 )
-                        {
-                    Mix_PlayChannel(3, musiqueSaut, 0);
-                    positionMario.y -= 50;
-                    gravite = 1;
-
-                    SDL_Flip(ecran);
-                        }
-
-                    break;
-/*
-                    default:
-                        break;
-                }
-
-            break;
-                    default:
-                        break;
-
-    } */
     }
-
-
-    //GRAVITE
-
-   /* if(gravite != 0)
-        {
-        tempsActuel = SDL_GetTicks();
-
-            if(tempsActuel - ancienTemps >= temps)
-                {
-                    ancienTemps = tempsActuel;
-                    positionMario.y += 50;
-                    gravite = 0;
-                }
-
-        SDL_FillRect(ecran, NULL, SDL_MapRGB(ecran->format, 0, 0, 0));
-        SDL_BlitSurface(background, NULL, ecran, &positionBackground);
-        SDL_BlitSurface(backgroundFloor, NULL, ecran, &positionBackgroundFloor);
-        SDL_BlitSurface(backgroundCloud, NULL, ecran, &positionBackgroundCloud);
-        SDL_BlitSurface(Mario, NULL, ecran, &positionMario);
-        SDL_BlitSurface(caisse1, NULL, ecran, &positionCaisse);
-        SDL_BlitSurface(score, NULL, ecran, &positionScore);
-        SDL_BlitSurface(bestScore, NULL, ecran, &positionBestScore);
-        SDL_BlitSurface(objectif, NULL, ecran, &positionObjectif);
-        SDL_BlitSurface(caisse2, NULL, ecran, &positionCaisse2);
-        SDL_Flip(ecran);
-    } */
 
 
 
@@ -826,7 +763,7 @@ return intervalle;
     int colision(SDL_Rect positionJoueur, SDL_Rect positionObstacle)
     {
 
-    if((positionJoueur.x + 70 == positionObstacle.x && positionJoueur.y + 95  <= 442) || (positionJoueur.y + 90 >= positionObstacle.y && positionJoueur.x + 70 >= positionObstacle.x && positionJoueur.x <= positionObstacle.x + 34))
+    if((positionJoueur.x + 70 == positionObstacle.x && positionJoueur.y + 90  >= 447) || (positionJoueur.y + 90 >= positionObstacle.y && positionJoueur.x + 70 >= positionObstacle.x && positionJoueur.x <= positionObstacle.x + 34))
     {
 
         return 1;
