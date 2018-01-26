@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
 
     char scoreChar[20] = "";
     char texteJouerChar[20] = "Jouer";
-    char texteNomChar[20] = "Clément Hennet";
+    char texteNomChar[20] = "ClÃ©ment Hennet";
     char gameOverChar[10] = "Game Over";
     char BestScoreAffiche[10];
     char texteBestScore[100];
@@ -124,6 +124,7 @@ int main(int argc, char *argv[])
 
     ecran = SDL_SetVideoMode(640, 544, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
     SDL_WM_SetCaption("LineRunner", NULL);
+    SDL_WM_SetIcon(IMG_Load("img/icone.png"), NULL);
 
     Mario = IMG_Load("img/mario1.png");
     caisse1 = IMG_Load("img/caisse.jpg");
